@@ -121,13 +121,14 @@ new Talent({
     }
 });
 
+//Changed scaling for smoother endgame
 new Talent({
     code: 'better_blanks',
     name: 'Better Blanks',
     shop_mode: 'blank',
-    min_level: 20,
+    min_level: 30,
     max_points_fn: function(game) {
-        return Math.floor((game.level() - 20)/ 20 + 1);
+        return Math.floor((game.level() - 30)/ 30 + 1);
     }
 });
 
@@ -135,7 +136,7 @@ new Talent({
     code: 'better_blank_generator',
     name: 'Better Blank Generator',
     shop_mode: 'blank_generator',
-    min_level: 25,
+    min_level: 35,
     max_points_fn: function(game) {
         return (Talents['better_blanks'].points()+1);
     }
@@ -145,9 +146,9 @@ new Talent({
     code: 'better_simple',
     name: 'Better Simple',
     shop_mode: 'single',
-    min_level: 30,
+    min_level: 20,
     max_points_fn: function(game) {
-        return Math.floor((game.level() - 30)/ 20 + 1);
+        return Math.floor((game.level() - 20)/ 20 + 1);
     }
 });
 
